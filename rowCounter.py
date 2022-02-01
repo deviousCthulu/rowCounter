@@ -32,18 +32,19 @@ def main():
     screen.blit(background,(0,0))
     pygame.display.flip()
 
-    #Button Presses; Increase 1, Decrease 1, Reset
-    for event in pygame.event.get():
-        if event.type == pygame.K_SPACE:
-            timeIncrease()
-        else:
-            if event.type == pygame.K_BACKSPACE:
-                timeDecrease()
-            else:
-                if event.type == pygame.K_RETURN:
-                    time = 0
-
     while True:
+    #Button Presses; Increase 1, Decrease 1, Reset
+        for event in pygame.event.get():
+            if event.type == pygame.K_SPACE:
+                timeIncrease()
+            else:
+                if event.type == pygame.K_BACKSPACE:
+                    timeDecrease()
+                else:
+                    if event.type == pygame.K_RETURN:
+                        time = 0
+
+    
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
